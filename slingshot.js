@@ -1,4 +1,4 @@
-class SlingShot {
+class slingshot {
 
     constructor(bodyA,pointB){
 
