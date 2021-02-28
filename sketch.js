@@ -77,7 +77,7 @@ function setup(){
     polygon = Bodies.circle(100,200,15,options);
     World.add(world,polygon);
 
-    slingshot = new SlingShot(polygon,{x:100,y:200});
+    slingshot1 = new SlingShot(polygon,{x:100,y:200});
 
 }
 
@@ -119,7 +119,7 @@ function draw(){
     imageMode (CENTER);
     image(polygonImage,polygon.position.x,polygon.position.y,40,40);
 
-    slingshot.display();
+    slingshot1.display();
 
     Engine.update(engine);
 
@@ -136,13 +136,13 @@ function mouseDragged(){
 
 
 function mouseReleased(){
-    slingshot.fly();
+    slingshot1.fly();
 }
 
 function keyPressed(){
 	
 	if (keyCode === 32){
 		Matter.Body.setPosition(polygon,{x:100,y:200});
-		slingshot.attach(polygon);
+		slingshot1.attach(polygon);
     }
 }
